@@ -1,0 +1,42 @@
+# 1. GET /api/clients - Récupérer tous les clients
+GET http://127.0.0.1:8000/api/clients
+
+###
+
+# 2. GET /api/clients/:telephone - Récupérer un client par son numéro de téléphone complet
+# Remplacez `5148481234` par un numéro existant dans la base de données.
+GET http://127.0.0.1:8000/api/clients/5148481234
+
+###
+
+# 3. POST /api/clients - Ajouter un nouveau client
+POST http://127.0.0.1:8000/api/clients
+Content-Type: application/json
+
+{
+  "nom": "Alice Dubois",
+  "adresse": "456 rue de la Paix",
+  "telephone": "5141234567",
+  "date": "2024-10-16"
+}
+
+###
+
+# 4. PUT /api/clients/:telephone - Modifier un client par numéro de téléphone
+# Remplacez `5141234567` par un numéro existant dans la base de données.
+PUT http://127.0.0.1:8000/api/clients/5141234567
+Content-Type: application/json
+
+{
+  "nom": "Alice Dubois Modifié",
+  "adresse": "456 rue Modifiée",
+  "telephone": "5147654321",
+  "date": "2024-10-20"
+}
+
+###
+
+# 5. DELETE /api/clients/:telephone - Supprimer un client par numéro de téléphone
+# Remplacez `5147654321` par un numéro existant dans la base de données.
+DELETE http://127.0.0.1:8000/api/clients/5147654321
+
